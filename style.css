@@ -1,0 +1,270 @@
+:root {
+    color-scheme: light dark;
+    
+    --cougar-red: #C8102E;
+    --lightmode-color: black;
+    --darkmode-color: white;
+}
+
+body {
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    min-height: 30vh;
+
+    background-image: linear-gradient(to bottom, light-dark(rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75)), light-dark(rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0.75))), url(./public/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header img {
+    height: 150px;
+}
+
+/* The Connect Banner is desktop-only */
+.social-media-banner {
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+}
+.social-media-banner h2 {
+    color: var(--cougar-red);
+    font-size: 4vh;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+/* These social media logos only appear on desktop */
+.logos {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.logos a {
+    margin-right: 15px;
+}
+.logos a img {
+    height: 5vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #C8102E;
+    color: white;
+}
+nav a {
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+nav a:hover {
+    background-color: white;
+    color: var(--cougar-red)
+}
+
+main {
+    color: light-dark(var(--lightmode-color), var(--darkmode-color));
+}
+main h1 {
+    color: var(--cougar-red);
+}
+main p {
+    font-size: larger;
+}
+main ul {
+    font-size: larger;
+}
+
+section button {
+    margin-top: 20px;
+}
+
+button {
+    color: var(--cougar-red);
+    background-color: transparent;
+
+    cursor: pointer;
+
+    border: solid;
+    border-color: var(--cougar-red);
+    border-width: 5px;
+    border-radius: 25px;
+
+    font-size: large;
+    font-weight: bolder;
+
+    width: 100%;
+    height: 75px;
+
+    transition: 0.3s;
+}
+button:hover {
+    color: white;
+    background-color: var(--cougar-red);
+    font-size: larger;
+}
+
+footer {
+    background-color: var(--cougar-red);
+    color: white;
+    display: flex;
+    padding: 30px;
+    margin-top: 50px; /* Give it some spacing from the main content */
+}
+footer section a {
+    color: white;
+    margin-top: 15px;
+}
+
+/* Mobile Layout */
+@media (width <= 800px) {
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+    }
+    main h1 {
+        font-size: 9vw; /* larger h1 scalar for mobile is important for legibility */
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+    .row ul {
+        list-style-position: inside; /* keeping the dots right next to the text looks nice */
+        padding-left: 0px; /* removes padding the dots brings */
+    }
+    .row img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .social-media-banner {
+        display: none; /* Buttons are too small to press on mobile */
+    }
+
+    nav {
+        flex-flow: column;
+        align-items: stretch;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    nav a {
+        text-align: center;
+        font-size: x-large;
+    }
+    nav .expand {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+    footer section {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+    footer #navigate {
+        display: none;
+    }
+    footer #credit {
+        display: none;
+    }
+    footer img {
+        display: none;
+    }
+}
+
+/* Desktop Layout */
+@media (width > 800px) {
+    nav #menu-button {
+        display: none;
+    }
+
+    main {
+        padding: 50px;
+    }
+    main h1 {
+        font-size: 50px
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        height: 600px;
+        margin-bottom: 150px;
+    }
+    
+    .picture-collumn {
+        width: 55vw;
+        min-height: 100%;
+        overflow: hidden;
+    }
+    .picture-collumn img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    section {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        height: 100%;
+        width: 45vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    section h1 {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .reverse {
+        flex-flow: row-reverse;
+    }
+
+    .left-image {
+        padding-right: 50px;
+    }
+
+    .right-image {
+        margin-left: 50px;
+    }
+    footer {
+        flex-flow: row;
+        justify-content: center;
+
+        height: 300px;
+    }
+    footer section {
+        display: flex;
+        justify-content: start;
+
+        width: 100px;
+    }
+
+    .center-button {
+        width: 50%;
+    }
+}

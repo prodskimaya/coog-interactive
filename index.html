@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coog Interactive</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <header>
+        <!-- Make a "Skip to Main Content" button for accessibility/People who tab-->
+
+        <img src="./public/logo.png" alt="Logo"/>
+
+        <!-- TODO: Make social logo sizes uniform -->
+        <!-- TODO: Make these disappear on small screens. Too crowded! Try implementing a hamburger menu-->
+        <!-- TODO: Add analytics to these links -->
+        <div class="social-media-banner">
+            <h2>Connect With Us:</h2>
+            <div class="logos">
+                <a href="https://discord.gg/ZBwh4YgxRA" target="_blank"><img src="./public/discord.png" alt="Discord" /></a>
+                <a href="https://www.instagram.com/cooginteractive/" target="_blank"><img src="./public/instagram.png" alt="Instagram" /></a>
+                <a href="https://www.linkedin.com/company/coog-interactive" target="_blank"><img src="./public/linkedin.png" alt="Linkedin" /></a>
+                <a href="https://uh.campuslabs.com/engage/organization/cooginteractive" target="_blank"><img src="./public/uh.png" alt="UH Get Involved" /></a> <!-- Placeholder -->
+            </div>
+        </div>
+    </header>
+
+    <!-- TODO: On mobile, move nav to bottom and make it sticky. Makes it easier to click buttons -->
+    <nav>
+        <a id="menu-button" onmousedown="toggleNavbar()">≡ Menu</a>
+        <a class="expand">Home</a>
+        <a class="expand">About</a>
+        <a class="expand">Games</a>
+        <a class="expand">Studio</a>
+        <a class="expand">Join</a>
+    </nav>
+
+    <main>
+        <div class="row">
+            <div class="picture-collumn">
+                <img src="./public/game-me.jpg" class="left-image"/>
+            </div>
+            <section>
+                <h1>GAMES GAMES GAMES.</h1>
+                <p>
+                    Coog Interactive provides a space for students who want to join the game development community where they can learn about the field through workshops, events and collaborating with peers. All fields of game development are welcome; regardless of skill level!
+                </p>
+                <ul>
+                    <li>2D & 3D Artists</li>
+                    <li>Audio Engineers</li>
+                    <li>Designers</li>
+                    <li>Multimedia Specialists</li>
+                    <li>Producers</li>
+                    <li>Programmers</li>
+                    <li>Writers</li>
+                    <li><strong>YOU!</strong></li>
+                </ul>
+                <button>JOIN THE DISCORD</button>
+            </section>
+        </div>
+        
+        <div class="reverse row">
+            <div class="picture-collumn">
+                <img src="./public/game-me2.jpg" class="right-image"/>
+            </div>
+            <section>
+                <h1>BRING YOUR GAME TO LIFE</h1>
+                <p>
+                    We operate a student-led game studio branch within the organization, producing official, collaborative games credited to contributors, with proceeds used to further the progress of game development programs at UH and the opportunities it provides to students interested in game development.
+                </p>
+                <button>LEARN MORE</button>
+            </section>
+        </div>
+
+        <div class="row">
+            <div class="picture-collumn">
+                <img src="./public/header-bg.jpg" class="left-image"/>
+            </div>
+            <section>
+                <h1>CLUB OFFICERS</h1>
+                <p>Learn about the team that keeps the club ticking!</p>
+                <p><strong>We're also looking for officers.</strong> Read more about open positions, eligibility requirements, and the application process below.</p>
+                <button>MEET THE TEAM</button>
+                <button>BECOME AN OFFICER</button>
+            </section>
+        </div>
+
+        <div class="reverse row">
+            <div class="picture-collumn">
+                <img src="./public/sol.jpg" class="right-image"/>
+            </div>
+            <section>
+                <h1>SUPPORT US</h1>
+                <p>
+                    Support our efforts in making game development more accessible for students at the University of Houston. Anything and everything helps.
+                </p>
+                <button>FOLLOW US</button>
+                <button>DONATE</button>
+            </section>
+        </div>
+
+        <div style="text-align: center;">
+            <h1>MEMBER SHOWCASE</h1>
+            <p>Video coming soon...</p>
+            <button class="center-button">CHECK OUT THE GAMES</button>
+        </div>
+    </main>
+
+    <footer>
+        <img src="./public/logo.png"/>
+        <section id="navigate">
+            <h3>NAVIGATE</h3>
+            <a>Home</a> <!-- TODO -->
+            <a>About</a> <!-- TODO -->
+            <a>Games</a> <!-- TODO -->
+            <a>Studio</a> <!-- TODO -->
+            <a>Join</a> <!-- TODO -->
+        </section>
+        <section id="connect">
+            <h3>CONNECT</h3>
+            <a href="https://discord.gg/ZBwh4YgxRA">Discord</a>
+            <a>Youtube</a> <!-- TODO -->
+            <a target="_blank" href="https://www.instagram.com/cooginteractive/">Instagram</a>
+            <a target="_blank" href="https://www.linkedin.com/company/coog-interactive">LinkedIn</a>
+            <a href="mailto:presidentcooginteractive@gmail.com">E-Mail</a>
+        </section>
+        <section id="misc">
+            <h3>MISC</h3> <!-- TODO -->
+            <a onclick="alert('This website does not collect any data at the moment. In the future, some statistics will be collected, however, all collected data will be completely anonymous.')" href="#misc">Privacy Policy</a> <!-- TODO -->
+            <a target="_blank" href="https://getinvolved.uh.edu/organization/cooginteractive/documents/view/2505522">Constitution</a>
+        </section>
+        <p id="credit">Made with ❤️ by Luke Gobin</p>
+    </footer>
+</body>
+</html>
